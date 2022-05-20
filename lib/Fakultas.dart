@@ -75,7 +75,7 @@ class Fakultas extends StatelessWidget {
                     style: TextStyle(
                         fontStyle: FontStyle.normal,
                         fontWeight: FontWeight.bold,
-                        fontSize: 25.0),
+                        fontSize: 20.0),
                   ),
                 ),
                 new Container(
@@ -83,7 +83,7 @@ class Fakultas extends StatelessWidget {
                     'Fakultas Pendidikan Matematika dan Ilmu Pengetahuan Alam',
                     textAlign: TextAlign.center,
                     style:
-                        TextStyle(fontStyle: FontStyle.normal, fontSize: 25.0),
+                        TextStyle(fontStyle: FontStyle.normal, fontSize: 15.0),
                   ),
                 ),
                 Image.network(
@@ -117,7 +117,7 @@ class Fakultas extends StatelessWidget {
                     style: TextStyle(
                         fontStyle: FontStyle.normal,
                         fontWeight: FontWeight.bold,
-                        fontSize: 25.0),
+                        fontSize: 20.0),
                   ),
                 ),
                 new Container(
@@ -125,7 +125,7 @@ class Fakultas extends StatelessWidget {
                     'Fakultas Pendidikan Ilmu Pengetahuan Sosial',
                     textAlign: TextAlign.center,
                     style:
-                        TextStyle(fontStyle: FontStyle.normal, fontSize: 25.0),
+                        TextStyle(fontStyle: FontStyle.normal, fontSize: 15.0),
                   ),
                 ),
                 Image.network(
