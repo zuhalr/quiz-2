@@ -3,14 +3,21 @@ import 'package:flutter/material.dart';
 import 'RincianFakultas.dart';
 
 class LayarKedua extends StatelessWidget {
-  const LayarKedua({Key? key, required this.pesan}) : super(key: key);
+  const LayarKedua(
+      {Key? key,
+      required this.pesan,
+      required this.pesan1,
+      required this.pesan2})
+      : super(key: key);
   final String pesan;
+  final String pesan1;
+  final String pesan2;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Screen 2'),
+          title: const Text('Rincian Fakultas'),
         ),
         body: Center(
           child: new Column(
@@ -21,7 +28,7 @@ class LayarKedua extends StatelessWidget {
               ),
               new Container(
                 child: new Text(
-                  'FPMIPA',
+                  '$pesan1',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontStyle: FontStyle.normal,
@@ -31,9 +38,16 @@ class LayarKedua extends StatelessWidget {
               ),
               new Container(
                 child: new Text(
-                  'Ini screen kedua, ada pesan: $pesan',
+                  '$pesan',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontStyle: FontStyle.normal, fontSize: 25.0),
+                ),
+              ),
+              new Container(
+                child: new Text(
+                  '$pesan2',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontStyle: FontStyle.normal, fontSize: 15.0),
                 ),
               ),
             ],
@@ -81,7 +95,12 @@ class Fakultas extends StatelessWidget {
           ),
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-              return const LayarKedua(pesan: "haloo ini pesan dari screen 1");
+              return const LayarKedua(
+                  pesan:
+                      "Fakultas Pendidikan Matematika dan Ilmu Pengetahuan Alam",
+                  pesan1: "FPMIPA",
+                  pesan2:
+                      "Terdapat 3 gedung yang berada pada lingkungan UPI dengan fasilitas yang memadai, yaitu: Gedung FPMIPA-A (JICA), Gedung FPMIPA-B, dan Gedung FPMIPA-C (Ilkom).");
             })); //gunakan navigator untuk panggil RincianFakultas
           },
         ),
@@ -118,7 +137,11 @@ class Fakultas extends StatelessWidget {
           ),
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-              return const LayarKedua(pesan: "haloo ini pesan dari screen 1");
+              return const LayarKedua(
+                  pesan: "Fakultas Pendidikan Ilmu Pengetahuan Sosial",
+                  pesan1: "FPIPS",
+                  pesan2:
+                      "FPIPS UPI merupakan salah satu fakultas yang cukup aktif dan populer di antara fakultas sejenis dari universitas lain. Bahkan FPIPS UPI berperan sebagai sekretariat tetap dalam Forum Komunikasi FPIPS seluruh Indonesia, lho! Forum komunikasi ini rutin menerbitkan Jurnal Pendidikan Ilmu Ilmu Sosial secara berkala sebanyak dua kali dalam setahun.");
             })); //gunakan navigator untuk panggil RincianFakultas
           },
         ),
